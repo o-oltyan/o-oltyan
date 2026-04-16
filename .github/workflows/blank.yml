@@ -20,3 +20,10 @@ jobs:
           token: ${{ secrets.METRICS_TOKEN }}
           base: ""
           plugin_isocalendar: yes
+      - uses: lowlighter/metrics@latest
+        with:
+          filename: metrics.plugin.lines.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+          base: repositories
+          plugin_lines: yes
+          plugin_lines_delay: 30
